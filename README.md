@@ -1,7 +1,7 @@
 promise-java
 ============
 
-**promise-java** is a `Promise` implementation for Java, it **flattens asynchronous code**, yet, it fully supports **concurrency**.
+A `Promise` implementation for Java, it **flattens asynchronous code**, yet, it fully supports **concurrency**.
 
 There is also an Objective-C implementation: [promise-objc](https://github.com/neevek/promise-objc)
 
@@ -49,6 +49,7 @@ Promise.with(new PromiseTask<Object>() {
 }).then(new OnFulfilledCallback<Object>() {
   @Override
   public Object onFulfilled(final Object result) {
+    // nested Promises is possible
     return Promise.with(new PromiseTask() {
       @Override
       public void run(final Resolver resolver) {
