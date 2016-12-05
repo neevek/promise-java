@@ -1,7 +1,10 @@
 package net.neevek.lib.java.promise;
 
 /**
- * Created by neevek on 04/12/2016.
+ * https://github.com/neevek/promise-java
+ * Author: neevek <i@neevek.net>
+ * Date: 2016-12-03
+ * © 2016
  */
 interface ResolveHelper {
   void resolve(int index, Object result);
